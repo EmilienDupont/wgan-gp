@@ -45,8 +45,7 @@ Parameters used were `lr=1e-4`, `betas=(.9, .99)`, `dim=16`, `latent_dim=100`. N
 ![mnist_gif](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
 
 #### Samples
-![mnist_samples](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
-
+![mnist_samples](https://github.com/EmilienDupont/wgan-gp/raw/master/imgs/mnist_samples.png)
 
 ### LSUN Bedrooms
 
@@ -58,4 +57,3 @@ Samples [work in progress]
 
 * https://github.com/caogang/wgan-gp
 * https://github.com/kuc2477/pytorch-wgan-gp
-
