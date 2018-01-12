@@ -2,6 +2,24 @@
 
 Pytorch implementation of [Improved Training of Wasserstein GANs](https://arxiv.org/abs/1704.00028) by Gulrajani et al.
 
+## Examples
+
+### MNIST
+
+Parameters used were `lr=1e-4`, `betas=(.9, .99)`, `dim=16`, `latent_dim=100`. Note that the images were resized from (28, 28) to (32, 32).
+
+#### Training (200 epochs)
+![mnist_gif](https://github.com/EmilienDupont/wgan-gp/raw/master/gifs/mnist_200_epochs.gif)
+
+#### Samples
+![mnist_samples](https://github.com/EmilienDupont/wgan-gp/raw/master/imgs/mnist_samples.png)
+
+### LSUN Bedrooms
+
+Gif [work in progress]
+
+Samples [work in progress]
+
 ## Usage
 
 Set up a generator and discriminator model
@@ -34,24 +52,6 @@ trainer.train(data_loader, epochs=200, save_training_gif=True)
 This will train the models and generate a gif of the training progress.
 
 Note that WGAN-GPs take a *long* time to converge. Even on MNIST it takes about 50 epochs to start seeing decent results. For more information and a full example on MNIST, check out `main.py`.
-
-## Examples
-
-### MNIST
-
-Parameters used were `lr=1e-4`, `betas=(.9, .99)`, `dim=16`, `latent_dim=100`. Note that the images were resized from (28, 28) to (32, 32).
-
-#### Training (200 epochs)
-![mnist_gif](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
-
-#### Samples
-![mnist_samples](https://github.com/EmilienDupont/wgan-gp/raw/master/imgs/mnist_samples.png)
-
-### LSUN Bedrooms
-
-Gif [work in progress]
-
-Samples [work in progress]
 
 ## Sources and inspiration
 
