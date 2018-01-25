@@ -14,6 +14,15 @@ Parameters used were `lr=1e-4`, `betas=(.9, .99)`, `dim=16`, `latent_dim=100`. N
 #### Samples
 ![mnist_samples](https://github.com/EmilienDupont/wgan-gp/raw/master/imgs/mnist_samples.png)
 
+
+### Fashion MNIST
+
+#### Training (200 epochs)
+![fashion_mnist_gif](https://github.com/EmilienDupont/wgan-gp/raw/master/gifs/training_200_epochs_fashion_mnist.gif)
+
+#### Samples
+![fashion_mnist_samples](https://github.com/EmilienDupont/wgan-gp/raw/master/imgs/fashion_mnist_samples.png)
+
 ### LSUN Bedrooms
 
 Gif [work in progress]
