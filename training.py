@@ -97,8 +97,12 @@ class Trainer():
         gradients = gradients.view(batch_size, -1)
         self.losses['gradient_norm'].append(gradients.norm(2, dim=1).mean().data[0])
 
+        # Derivatives of the gradient close to 0 can cause problems because of
+        # the square root, so manually calculate norm and add epsilon
+        gradients_norm = torch.sqrt(torch.sum(gradients ** 2, dim=1) + 1e-12)
+
         # Return gradient penalty
-        return self.gp_weight * ((gradients.norm(2, dim=1) - 1) ** 2).mean()
+        return self.gp_weight * ((gradients_norm - 1) ** 2).mean()
 
     def _train_epoch(self, data_loader):
         for i, data in enumerate(data_loader):
